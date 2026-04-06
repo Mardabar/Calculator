@@ -276,7 +276,7 @@ public class Calculator {
 
                     if (parts.length == 2 && !parts[1].isEmpty()) {
                         try {
-                            b = Double.parseDouble(parts[1]);
+                            b = Double.parseDouble(parts[2]);
                             result = Math.pow(a, b);
                             txtDisplay.setText(String.valueOf(result));
                         } catch (NumberFormatException ex) {
@@ -299,7 +299,6 @@ public class Calculator {
                         } catch (NumberFormatException ex) {
                             txtDisplay.setText("Error");
                         }
-                        return;
                     } else {
                         txtDisplay.setText("Error: Missing root");
                     }
